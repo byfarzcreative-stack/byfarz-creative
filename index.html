@@ -1,20 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="ms">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff1f5">
-  <meta name="description" content="BYFARZ CREATIVE — aksesori comel dan hadiah custom yang dibuat khas untuk anda.">
-  <title>BYFARZ CREATIVE | Cute Little Things</title>
+  <meta name="theme-color" content="#168be0">
+  <meta name="description" content="BYFARZ CREATIVE - cute custom gifts, keychains and creative accessories.">
+  <title>BYFARZ CREATIVE | Retro Game World</title>
 
   <style>
     :root {
-      --pink: #f4b8ca;
-      --pink-dark: #bd718b;
-      --pink-light: #fff0f5;
-      --cream: #fffaf2;
-      --brown: #66504e;
-      --white: #ffffff;
+      --sky: #54c9ff;
+      --blue: #1675d1;
+      --navy: #15365c;
+      --red: #f34242;
+      --yellow: #ffdf48;
+      --green: #55c85a;
+      --cream: #fff8df;
+      --ink: #29344b;
+      --pixel: 4px solid var(--navy);
+      --shadow: 6px 6px 0 var(--navy);
     }
 
     * {
@@ -27,9 +32,15 @@
 
     body {
       margin: 0;
-      background: var(--cream);
-      color: var(--brown);
-      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      font-family: "Courier New", monospace;
+      background-color: var(--sky);
+      background-image:
+        radial-gradient(ellipse at 20% 10%, white 0 35px, transparent 36px),
+        radial-gradient(ellipse at 25% 8%, white 0 24px, transparent 25px),
+        radial-gradient(ellipse at 80% 22%, #e8faff 0 32px, transparent 33px),
+        linear-gradient(#54c9ff 0%, #b6eeff 68%, #f8ffdf 100%);
+      background-attachment: fixed;
       line-height: 1.6;
     }
 
@@ -38,24 +49,30 @@
       text-decoration: none;
     }
 
-    .top-note {
-      padding: 9px 15px;
-      background: #f8dce5;
-      color: #805461;
+    button {
+      font-family: inherit;
+    }
+
+    .announcement {
+      padding: 9px 12px;
+      background: var(--yellow);
+      border-bottom: var(--pixel);
       text-align: center;
-      font-size: 12px;
+      font-size: 11px;
+      font-weight: 900;
       letter-spacing: 1px;
     }
 
     header {
-      padding: 20px;
-      background: rgba(255, 250, 242, 0.96);
-      border-bottom: 1px solid #f4e4e3;
+      background: var(--red);
+      border-bottom: 6px solid var(--navy);
+      box-shadow: 0 5px 0 rgba(21, 54, 92, 0.12);
     }
 
     .nav {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
+      padding: 17px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -64,284 +81,405 @@
     }
 
     .brand {
-      color: var(--pink-dark);
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 2px;
+      color: white;
+      font-size: clamp(17px, 4vw, 25px);
+      font-weight: 1000;
+      text-shadow: 3px 3px 0 var(--navy);
+      letter-spacing: 1px;
     }
 
     .nav-link {
-      font-size: 13px;
-      font-weight: bold;
+      background: var(--yellow);
+      border: 3px solid var(--navy);
+      box-shadow: 3px 3px 0 var(--navy);
+      padding: 7px 11px;
+      font-size: 11px;
+      font-weight: 900;
     }
 
     .hero {
-      padding: 65px 20px 55px;
+      position: relative;
+      overflow: hidden;
+      padding: 65px 18px 95px;
       text-align: center;
-      background:
-        radial-gradient(circle at 12% 25%, #ffffff 0 4px, transparent 5px),
-        radial-gradient(circle at 88% 70%, #ffffff 0 5px, transparent 6px),
-        linear-gradient(135deg, #fff0f5, #fff8ed);
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255,255,255,0.15) 60%,
+        #d5f9a7 100%
+      );
     }
 
-    .hero-label {
+    .level-label {
       display: inline-block;
-      padding: 6px 14px;
-      border: 1px solid #efc5d2;
-      border-radius: 30px;
-      color: var(--pink-dark);
+      background: white;
+      border: 3px solid var(--navy);
+      box-shadow: 4px 4px 0 var(--navy);
+      padding: 7px 13px;
       font-size: 11px;
-      letter-spacing: 2px;
+      font-weight: 900;
     }
 
     .hero h1 {
-      margin: 20px 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 7vw, 58px);
-      line-height: 1.15;
-      color: #9d6377;
+      margin: 24px auto 15px;
+      max-width: 800px;
+      color: white;
+      font-size: clamp(34px, 8vw, 68px);
+      line-height: 1.12;
+      font-weight: 1000;
+      letter-spacing: -2px;
+      -webkit-text-stroke: 1px var(--navy);
+      text-shadow:
+        4px 4px 0 var(--navy),
+        7px 7px 0 rgba(21, 54, 92, 0.18);
+    }
+
+    .hero h1 span {
+      color: var(--yellow);
     }
 
     .hero p {
-      max-width: 480px;
-      margin: 0 auto 25px;
-      font-size: 14px;
-      color: #826d69;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 22px;
-      border: none;
-      border-radius: 30px;
-      background: var(--pink-dark);
-      color: white;
+      max-width: 560px;
+      margin: 0 auto 27px;
+      padding: 13px;
+      background: rgba(255,255,255,0.92);
+      border: 3px solid var(--navy);
+      box-shadow: 4px 4px 0 var(--navy);
       font-size: 13px;
       font-weight: bold;
+    }
+
+    .pixel-btn {
+      display: inline-block;
+      padding: 13px 18px;
+      background: var(--yellow);
+      color: var(--navy);
+      border: 3px solid var(--navy);
+      box-shadow: 5px 5px 0 var(--navy);
+      font-size: 12px;
+      font-weight: 1000;
       cursor: pointer;
-      transition: transform 0.2s, background 0.2s;
+      transition: transform 0.12s, box-shadow 0.12s;
     }
 
-    .button:hover {
-      background: #a85e77;
-      transform: translateY(-2px);
+    .pixel-btn:hover {
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--navy);
     }
 
-    .button-light {
-      background: white;
-      color: var(--pink-dark);
-      border: 1px solid #efd1da;
+    .decorations {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      font-size: 30px;
+    }
+
+    .deco {
+      position: absolute;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .deco-one {
+      top: 13%;
+      left: 7%;
+    }
+
+    .deco-two {
+      top: 29%;
+      right: 8%;
+      animation-delay: .6s;
+    }
+
+    .deco-three {
+      bottom: 18%;
+      left: 13%;
+      animation-delay: 1s;
+    }
+
+    .deco-four {
+      bottom: 19%;
+      right: 13%;
+      animation-delay: .3s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    .ground {
+      height: 36px;
+      border-top: 6px solid var(--navy);
+      border-bottom: 6px solid var(--navy);
+      background: repeating-linear-gradient(
+        90deg,
+        #62ce56 0 38px,
+        #45b943 38px 76px
+      );
+      position: relative;
+    }
+
+    .ground::after {
+      content: "";
+      position: absolute;
+      top: 12px;
+      width: 100%;
+      height: 6px;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent 0 30px,
+        rgba(21,54,92,.3) 30px 36px
+      );
     }
 
     .section {
-      max-width: 1050px;
+      max-width: 1100px;
       margin: auto;
-      padding: 55px 20px;
+      padding: 52px 20px;
     }
 
     .section-heading {
-      margin-bottom: 28px;
       text-align: center;
+      margin-bottom: 35px;
     }
 
-    .section-heading span {
-      color: var(--pink-dark);
+    .section-heading .eyebrow {
+      display: inline-block;
+      padding: 5px 10px;
+      background: var(--red);
+      border: 3px solid var(--navy);
+      color: white;
       font-size: 11px;
-      font-weight: bold;
-      letter-spacing: 3px;
+      font-weight: 900;
+      box-shadow: 3px 3px 0 var(--navy);
     }
 
     .section-heading h2 {
-      margin: 8px 0;
-      color: #76545a;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 32px;
+      margin: 17px 0 8px;
+      color: var(--navy);
+      font-size: clamp(24px, 5vw, 38px);
+      line-height: 1.2;
+      text-shadow: 2px 2px 0 white;
     }
 
     .section-heading p {
       margin: 0;
-      color: #98827c;
-      font-size: 13px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
     .products {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 23px;
     }
 
     .product-card {
-      overflow: hidden;
-      background: white;
-      border: 1px solid #f2e4e2;
-      border-radius: 18px;
-      box-shadow: 0 5px 20px rgba(130, 83, 89, 0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
+      background: var(--cream);
+      border: 4px solid var(--navy);
+      box-shadow: var(--shadow);
+      transition: transform .15s;
+      min-width: 0;
     }
 
     .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 9px 25px rgba(130, 83, 89, 0.12);
+      transform: translateY(-5px);
     }
 
     .product-art {
-      min-height: 165px;
+      min-height: 175px;
       display: flex;
-      align-items: center;
-      justify-content: center;
       flex-direction: column;
-      gap: 8px;
-      background: linear-gradient(145deg, #fff0f5, #fff8ed);
-      border-bottom: 1px solid #f6e8e6;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--navy);
+      background-color: #bdeaff;
+      background-image:
+        linear-gradient(45deg, rgba(255,255,255,.32) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,.32) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,.32) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.32) 75%);
+      background-size: 24px 24px;
+    }
+
+    .product-card:nth-child(3n+2) .product-art {
+      background-color: #ffe9a0;
+    }
+
+    .product-card:nth-child(3n) .product-art {
+      background-color: #c5f5b7;
     }
 
     .product-art .emoji {
-      font-size: 49px;
+      position: relative;
+      z-index: 1;
+      font-size: 53px;
       line-height: 1.2;
+      filter: drop-shadow(3px 4px 0 rgba(21,54,92,.15));
     }
 
     .product-art small {
-      color: #ae8190;
-      font-size: 10px;
-      letter-spacing: 2px;
+      position: relative;
+      z-index: 1;
+      padding: 4px 7px;
+      background: white;
+      border: 2px solid var(--navy);
+      font-size: 9px;
+      font-weight: 900;
     }
 
     .product-info {
-      padding: 17px;
+      padding: 16px;
     }
 
     .product-info h3 {
-      margin: 0 0 5px;
-      color: #76545a;
-      font-size: 16px;
+      margin: 0 0 8px;
+      font-size: 15px;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
     }
 
     .product-info p {
-      min-height: 40px;
-      margin: 0 0 15px;
-      color: #98827c;
-      font-size: 12px;
+      min-height: 58px;
+      margin: 0 0 13px;
+      color: #5d6470;
+      font-size: 11px;
+      line-height: 1.7;
     }
 
     .product-footer {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
     }
 
     .price {
-      color: var(--pink-dark);
+      align-self: flex-start;
+      background: var(--yellow);
+      border: 2px solid var(--navy);
+      padding: 4px 7px;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .order-btn {
+      width: 100%;
+      padding: 10px 7px;
+      background: var(--red);
+      color: white;
+      border: 3px solid var(--navy);
+      box-shadow: 3px 3px 0 var(--navy);
+      font-size: 11px;
+      font-weight: 1000;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background: #d92d37;
+    }
+
+    .mission {
+      margin: 20px;
+      padding: 32px 20px;
+      background: var(--yellow);
+      border: 4px solid var(--navy);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .mission .icon {
+      font-size: 36px;
+    }
+
+    .mission h2 {
+      margin: 10px 0;
+      font-size: clamp(22px, 5vw, 32px);
+      line-height: 1.3;
+    }
+
+    .mission p {
+      max-width: 570px;
+      margin: auto;
       font-size: 12px;
       font-weight: bold;
     }
 
-    .order-button {
-      padding: 9px 12px;
-      border-radius: 25px;
-      background: var(--pink-light);
-      color: #a55e77;
-      font-size: 11px;
-      font-weight: bold;
-      border: 1px solid #f2d7e0;
-      cursor: pointer;
-    }
-
-    .order-button:hover {
-      background: #f7dbe5;
-    }
-
-    .about {
-      padding: 45px 20px;
-      background: #fff0f5;
-      text-align: center;
-    }
-
-    .about-inner {
-      max-width: 650px;
-      margin: auto;
-    }
-
-    .about .heart {
-      font-size: 28px;
-    }
-
-    .about h2 {
-      margin: 10px 0;
-      color: #9d6377;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-    }
-
-    .about p {
-      color: #826d69;
-      font-size: 13px;
-    }
-
     .contact {
-      padding: 45px 20px;
+      margin-top: 40px;
+      padding: 48px 20px;
       text-align: center;
+      color: white;
+      background: var(--blue);
+      border-top: 6px solid var(--navy);
     }
 
     .contact h2 {
-      margin: 0 0 10px;
-      color: #76545a;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
+      margin: 0 0 12px;
+      font-size: clamp(23px, 5vw, 35px);
+      text-shadow: 3px 3px 0 var(--navy);
     }
 
     .contact p {
-      margin: 0 auto 20px;
-      color: #98827c;
-      font-size: 13px;
+      max-width: 500px;
+      margin: 0 auto 24px;
+      font-size: 12px;
     }
 
     footer {
-      padding: 22px 15px;
-      background: #f8e0e7;
-      color: #8a6570;
+      padding: 18px 12px;
+      background: var(--navy);
+      color: white;
       text-align: center;
-      font-size: 11px;
+      font-size: 10px;
+      font-weight: bold;
       letter-spacing: 1px;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 760px) {
       .products {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-      }
-
-      .product-art {
-        min-height: 130px;
-      }
-
-      .product-art .emoji {
-        font-size: 40px;
-      }
-
-      .product-info {
-        padding: 12px;
-      }
-
-      .product-info h3 {
-        font-size: 14px;
-      }
-
-      .product-footer {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .order-button {
-        width: 100%;
+        gap: 14px;
       }
 
       .section {
-        padding: 40px 14px;
+        padding: 38px 14px;
       }
 
-      .brand {
-        font-size: 19px;
+      .product-art {
+        min-height: 135px;
+      }
+
+      .product-art .emoji {
+        font-size: 43px;
+      }
+
+      .product-info {
+        padding: 11px;
+      }
+
+      .product-info h3 {
+        font-size: 13px;
+      }
+
+      .product-info p {
+        min-height: 68px;
+        font-size: 10px;
+      }
+
+      .hero {
+        padding: 58px 18px 75px;
+      }
+
+      .deco {
+        font-size: 23px;
+      }
+
+      .mission {
+        margin: 14px;
       }
     }
 
@@ -353,72 +491,92 @@
       .product-art {
         min-height: 155px;
       }
+
+      .product-info p {
+        min-height: auto;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="top-note">
-    ♡ MADE WITH LOVE · BYFARZ CREATIVE ♡
+  <div class="announcement">
+    ★ PLAYER 1 READY? WELCOME TO BYFARZ CREATIVE! ★
   </div>
 
   <header>
     <nav class="nav">
-      <a class="brand" href="#home">BYFARZ CREATIVE ♡</a>
-      <a class="nav-link" href="#products">OUR COLLECTION ↓</a>
+      <a class="brand" href="#home">BYFARZ CREATIVE</a>
+      <a class="nav-link" href="#products">▶ VIEW ITEMS</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <span class="hero-label">CUTE LITTLE THINGS</span>
+      <div class="decorations" aria-hidden="true">
+        <span class="deco deco-one">☁️</span>
+        <span class="deco deco-two">⭐</span>
+        <span class="deco deco-three">🪙</span>
+        <span class="deco deco-four">🍄</span>
+      </div>
 
-      <h1>Little Things,<br>Big Happiness ♡</h1>
+      <span class="level-label">★ LEVEL 01: THE CUTE SHOP ★</span>
+
+      <h1>WELCOME TO<br><span>OUR LITTLE</span><br>GAME WORLD!</h1>
 
       <p>
-        Welcome to BYFARZ CREATIVE — your little corner
-        for cute accessories, personalised gifts and
-        lovely things made just for you.
+        Cute things, custom gifts and little treasures
+        are waiting for you. Choose your favourite item
+        and let's start your adventure!
       </p>
 
-      <a class="button" href="#products">EXPLORE OUR PRODUCTS</a>
+      <a class="pixel-btn" href="#products">▶ START SHOPPING</a>
     </section>
+
+    <div class="ground" aria-hidden="true"></div>
 
     <section class="section" id="products">
       <div class="section-heading">
-        <span>THE COLLECTION</span>
-        <h2>Our Lovely Products</h2>
-        <p>Find something cute for yourself or someone special ♡</p>
+        <span class="eyebrow">★ ITEM SELECT ★</span>
+        <h2>CHOOSE YOUR ITEM!</h2>
+        <p>Pick your favourite treasure from our collection.</p>
       </div>
 
       <div class="products">
-
         <article class="product-card">
           <div class="product-art">
             <span class="emoji">🧸</span>
-            <small>CUTE & FUN</small>
+            <small>ITEM 001 · CUTE</small>
           </div>
           <div class="product-info">
             <h3>Clicker Keychain</h3>
             <p>A cute little accessory to bring along every day.</p>
             <div class="product-footer">
-              <span class="price">Price upon enquiry</span>
-              <button class="order-button" data-product="Clicker Keychain">ORDER ♡</button>
+              <span class="price">PRICE: ASK US</span>
+              <button class="order-btn" data-product="Clicker Keychain">GET THIS ITEM ↗</button>
             </div>
           </div>
         </article>
 
         <article class="product-card">
           <div class="product-art">
-            <span class="emoji">💗</span>
-            <small>PERSONALISED</small>
+            <span class="emoji">💖</span>
+            <small>ITEM 002 · CUSTOM</small>
           </div>
           <div class="product-info">
             <h3>Keychain Nama Bulat</h3>
-            <p>A personalised round name keychain made for you.</p>
+            <p>A personalised round name keychain made just for you.</p>
             <div class="product-footer">
-              <span class="price">Price upon enquiry</span>
-              <button class="order-button" data-product="Keychain Nama Bulat">ORDER ♡</button>
+              <span class="price">PRICE: ASK US</span>
+              <button class="order-btn" data-product="Keychain Nama Bulat">GET THIS ITEM ↗</button>
             </div>
           </div>
         </article>
@@ -426,14 +584,14 @@
         <article class="product-card">
           <div class="product-art">
             <span class="emoji">🎀</span>
-            <small>CHARM COLLECTION</small>
+            <small>ITEM 003 · CHARM</small>
           </div>
           <div class="product-info">
             <h3>Keychain Charm</h3>
-            <p>A sweet little charm to decorate your favourite items.</p>
+            <p>A fun little charm for your bag, keys or gift.</p>
             <div class="product-footer">
-              <span class="price">Price upon enquiry</span>
-              <button class="order-button" data-product="Keychain Charm">ORDER ♡</button>
+              <span class="price">PRICE: ASK US</span>
+              <button class="order-btn" data-product="Keychain Charm">GET THIS ITEM ↗</button>
             </div>
           </div>
         </article>
@@ -441,14 +599,14 @@
         <article class="product-card">
           <div class="product-art">
             <span class="emoji">🧱</span>
-            <small>MINI FIGURE</small>
+            <small>ITEM 004 · FIGURE</small>
           </div>
           <div class="product-info">
             <h3>Minifigure Brick</h3>
-            <p>A tiny figure for your collection or a special gift.</p>
+            <p>A mini figure for your collection or a special gift.</p>
             <div class="product-footer">
-              <span class="price">Price upon enquiry</span>
-              <button class="order-button" data-product="Minifigure Brick">ORDER ♡</button>
+              <span class="price">PRICE: ASK US</span>
+              <button class="order-btn" data-product="Minifigure Brick">GET THIS ITEM ↗</button>
             </div>
           </div>
         </article>
@@ -456,14 +614,14 @@
         <article class="product-card">
           <div class="product-art">
             <span class="emoji">🌷</span>
-            <small>HAPPY LITTLE KIT</small>
+            <small>ITEM 005 · HAPPY KIT</small>
           </div>
           <div class="product-info">
             <h3>Mini Joy Kit</h3>
-            <p>A little bundle of joy for someone you love.</p>
+            <p>A little bundle of joy to brighten someone's day.</p>
             <div class="product-footer">
-              <span class="price">Price upon enquiry</span>
-              <button class="order-button" data-product="Mini Joy Kit">ORDER ♡</button>
+              <span class="price">PRICE: ASK US</span>
+              <button class="order-btn" data-product="Mini Joy Kit">GET THIS ITEM ↗</button>
             </div>
           </div>
         </article>
@@ -471,52 +629,48 @@
         <article class="product-card">
           <div class="product-art">
             <span class="emoji">📔</span>
-            <small>AESTHETIC ESSENTIALS</small>
+            <small>ITEM 006 · JOURNAL</small>
           </div>
           <div class="product-info">
             <h3>Setem Journal Aesthetic</h3>
-            <p>Add a cute touch to your journal and creative pages.</p>
+            <p>Add a creative touch to your journal and pages.</p>
             <div class="product-footer">
-              <span class="price">Price upon enquiry</span>
-              <button class="order-button" data-product="Setem Journal Aesthetic">ORDER ♡</button>
+              <span class="price">PRICE: ASK US</span>
+              <button class="order-btn" data-product="Setem Journal Aesthetic">GET THIS ITEM ↗</button>
             </div>
           </div>
         </article>
-
       </div>
     </section>
 
-    <section class="about">
-      <div class="about-inner">
-        <div class="heart">♡ ♡ ♡</div>
-        <h2>A Little Shop Full of Love</h2>
-        <p>
-          At BYFARZ CREATIVE, we believe little things can
-          make someone's day extra special. Thank you for
-          supporting our small creative business.
-        </p>
-      </div>
+    <section class="mission">
+      <div class="icon">🏆 ⭐ 🪙</div>
+      <h2>YOUR NEXT FAVOURITE ITEM AWAITS!</h2>
+      <p>
+        Every little treasure has its own story.
+        Thank you for supporting our small creative shop.
+        Let's make something special together!
+      </p>
     </section>
 
     <section class="contact" id="contact">
-      <h2>Let's Make Someone Smile ♡</h2>
+      <h2>READY FOR YOUR NEXT QUEST?</h2>
       <p>
-        Interested in a product? Tap below to chat with us
-        on WhatsApp and ask about prices or custom orders.
+        Have a question about our products or want to
+        request a custom item? Chat with us on WhatsApp!
       </p>
+
       <a
-        class="button"
-        href="https://wa.me/601169304215?text=Hi%20BYFARZ%20CREATIVE!%20I%20would%20like%20to%20enquire%20about%20your%20products."
+        class="pixel-btn"
+        href="https://wa.me/601169304215?text=Hi%20BYFARZ%20CREATIVE!%20I%20would%20like%20to%20ask%20about%20your%20products."
         target="_blank"
         rel="noopener noreferrer"
-      >
-        CHAT WITH US ON WHATSAPP
-      </a>
+      >▶ CHAT ON WHATSAPP</a>
     </section>
   </main>
 
   <footer>
-    © <span id="year"></span> BYFARZ CREATIVE · MADE WITH ♡
+    © <span id="year"></span> BYFARZ CREATIVE · GAME ON! ★
   </footer>
 
   <script>
@@ -539,7 +693,7 @@
           "?text=" +
           encodeURIComponent(message);
 
-        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+        window.open(whatsappURL, "_blank");
       });
     });
   </script>
