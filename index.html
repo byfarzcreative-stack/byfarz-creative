@@ -1,234 +1,547 @@
-
 <!DOCTYPE html>
 <html lang="ms">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff6f8">
-<meta name="description" content="BYFARZ CREATIVE — hadiah custom, keychain comel dan aksesori journaling.">
-<title>BYFARZ CREATIVE | Little Things, Made Special</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f5">
+  <meta name="description" content="BYFARZ CREATIVE — aksesori comel dan hadiah custom yang dibuat khas untuk anda.">
+  <title>BYFARZ CREATIVE | Cute Little Things</title>
 
-<style>
-:root {
-  --pink: #e9a2bb;
-  --pink-dark: #b9577c;
-  --pink-light: #fce8ef;
-  --cream: #fff8f0;
-  --white: #fffdfb;
-  --ink: #604653;
-  --muted: #967b88;
-  --border: #f1d6e0;
-  --lavender: #eee5f8;
-  --sage: #e4eee2;
-}
+  <style>
+    :root {
+      --pink: #f4b8ca;
+      --pink-dark: #bd718b;
+      --pink-light: #fff0f5;
+      --cream: #fffaf2;
+      --brown: #66504e;
+      --white: #ffffff;
+    }
 
-* {
-  box-sizing: border-box;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 20px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body {
-  margin: 0;
-  background:
-    radial-gradient(ellipse at 0% 10%, #fde9f0 0, transparent 30%),
-    radial-gradient(ellipse at 100% 50%, #fff0df 0, transparent 28%),
-    var(--cream);
-  color: var(--ink);
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--brown);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
 
-a {
-  -webkit-tap-highlight-color: transparent;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-header {
-  position: relative;
-  padding: 17px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  background: rgba(255, 253, 251, 0.96);
-  border-bottom: 2px solid var(--border);
-}
+    .top-note {
+      padding: 9px 15px;
+      background: #f8dce5;
+      color: #805461;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
 
-.brand {
-  font-family: Georgia, serif;
-  font-size: 17px;
-  letter-spacing: 2px;
-  color: var(--pink-dark);
-  font-weight: bold;
-}
+    header {
+      padding: 20px;
+      background: rgba(255, 250, 242, 0.96);
+      border-bottom: 1px solid #f4e4e3;
+    }
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
+    .nav {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
 
-.nav a {
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-}
+    .brand {
+      color: var(--pink-dark);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
 
-.nav a:hover {
-  color: var(--pink-dark);
-}
+    .nav-link {
+      font-size: 13px;
+      font-weight: bold;
+    }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  margin: 30px auto 25px;
-  width: min(1120px, 92%);
-  border: 2px solid var(--border);
-  border-radius: 30px;
-  padding: 45px 20px;
-  text-align: center;
-  background: rgba(255, 253, 251, 0.92);
-  box-shadow: 0 10px 30px rgba(185, 87, 124, 0.09);
-}
+    .hero {
+      padding: 65px 20px 55px;
+      text-align: center;
+      background:
+        radial-gradient(circle at 12% 25%, #ffffff 0 4px, transparent 5px),
+        radial-gradient(circle at 88% 70%, #ffffff 0 5px, transparent 6px),
+        linear-gradient(135deg, #fff0f5, #fff8ed);
+    }
 
-.hero::before {
-  content: "✿  ♡";
-  position: absolute;
-  top: 14px;
-  left: 17px;
-  color: #e7a0ba;
-  font-size: 22px;
-  letter-spacing: 5px;
-}
+    .hero-label {
+      display: inline-block;
+      padding: 6px 14px;
+      border: 1px solid #efc5d2;
+      border-radius: 30px;
+      color: var(--pink-dark);
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
 
-.hero::after {
-  content: "♡  ✧";
-  position: absolute;
-  bottom: 12px;
-  right: 17px;
-  color: #c8acd9;
-  font-size: 22px;
-  letter-spacing: 5px;
-}
+    .hero h1 {
+      margin: 20px 0 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(34px, 7vw, 58px);
+      line-height: 1.15;
+      color: #9d6377;
+    }
 
-.monogram {
-  font-family: Georgia, serif;
-  font-size: clamp(68px, 12vw, 115px);
-  line-height: 1.2;
-  color: var(--pink-dark);
-  letter-spacing: -8px;
-  text-shadow: 3px 4px 0 #fce4ec;
-}
+    .hero p {
+      max-width: 480px;
+      margin: 0 auto 25px;
+      font-size: 14px;
+      color: #826d69;
+    }
 
-.hero h1 {
-  font-family: Georgia, serif;
-  font-size: clamp(23px, 4vw, 38px);
-  font-weight: normal;
-  letter-spacing: 3px;
-  color: var(--pink-dark);
-  margin: 8px 0;
-}
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 30px;
+      background: var(--pink-dark);
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
 
-.tagline {
-  font-family: Georgia, serif;
-  font-style: italic;
-  color: #a16d91;
-  font-size: clamp(16px, 2.5vw, 23px);
-  margin: 20px 0;
-}
+    .button:hover {
+      background: #a85e77;
+      transform: translateY(-2px);
+    }
 
-.eyebrow {
-  font-size: 10px;
-  letter-spacing: 2px;
-  color: var(--pink-dark);
-  margin: 22px 0 8px;
-}
+    .button-light {
+      background: white;
+      color: var(--pink-dark);
+      border: 1px solid #efd1da;
+    }
 
-.hero h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(25px, 4vw, 38px);
-  line-height: 1.3;
-  color: var(--ink);
-  margin: 14px 0;
-}
+    .section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 55px 20px;
+    }
 
-.intro {
-  max-width: 540px;
-  margin: 0 auto 23px;
-  line-height: 1.8;
-  font-size: 14px;
-}
+    .section-heading {
+      margin-bottom: 28px;
+      text-align: center;
+    }
 
-.btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #e9a2bb, #c96f93);
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 30px;
-  padding: 12px 20px;
-  font-size: 13px;
-  font-weight: bold;
-  border: 1px solid #e6a0b9;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(185, 87, 124, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+    .section-heading span {
+      color: var(--pink-dark);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 14px rgba(185, 87, 124, 0.22);
-}
+    .section-heading h2 {
+      margin: 8px 0;
+      color: #76545a;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 32px;
+    }
 
-main {
-  max-width: 1120px;
-  width: 92%;
-  margin: 35px auto 60px;
-}
+    .section-heading p {
+      margin: 0;
+      color: #98827c;
+      font-size: 13px;
+    }
 
-.section-head {
-  text-align: center;
-  margin: 45px 0 25px;
-}
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
 
-.section-head h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  font-size: clamp(28px, 4vw, 36px);
-  color: var(--pink-dark);
-  margin: 0 0 8px;
-}
+    .product-card {
+      overflow: hidden;
+      background: white;
+      border: 1px solid #f2e4e2;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(130, 83, 89, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
 
-.section-head h2::before {
-  content: "♡ ";
-  color: var(--pink);
-}
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 9px 25px rgba(130, 83, 89, 0.12);
+    }
 
-.section-head h2::after {
-  content: " ♡";
-  color: var(--pink);
-}
+    .product-art {
+      min-height: 165px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 8px;
+      background: linear-gradient(145deg, #fff0f5, #fff8ed);
+      border-bottom: 1px solid #f6e8e6;
+    }
 
-.muted {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.7;
-}
+    .product-art .emoji {
+      font-size: 49px;
+      line-height: 1.2;
+    }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-}
+    .product-art small {
+      color: #ae8190;
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
 
-.card {
-  position: relative;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 23
+    .product-info {
+      padding: 17px;
+    }
+
+    .product-info h3 {
+      margin: 0 0 5px;
+      color: #76545a;
+      font-size: 16px;
+    }
+
+    .product-info p {
+      min-height: 40px;
+      margin: 0 0 15px;
+      color: #98827c;
+      font-size: 12px;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .price {
+      color: var(--pink-dark);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .order-button {
+      padding: 9px 12px;
+      border-radius: 25px;
+      background: var(--pink-light);
+      color: #a55e77;
+      font-size: 11px;
+      font-weight: bold;
+      border: 1px solid #f2d7e0;
+      cursor: pointer;
+    }
+
+    .order-button:hover {
+      background: #f7dbe5;
+    }
+
+    .about {
+      padding: 45px 20px;
+      background: #fff0f5;
+      text-align: center;
+    }
+
+    .about-inner {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .about .heart {
+      font-size: 28px;
+    }
+
+    .about h2 {
+      margin: 10px 0;
+      color: #9d6377;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+    }
+
+    .about p {
+      color: #826d69;
+      font-size: 13px;
+    }
+
+    .contact {
+      padding: 45px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin: 0 0 10px;
+      color: #76545a;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+    }
+
+    .contact p {
+      margin: 0 auto 20px;
+      color: #98827c;
+      font-size: 13px;
+    }
+
+    footer {
+      padding: 22px 15px;
+      background: #f8e0e7;
+      color: #8a6570;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      .products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .product-art {
+        min-height: 130px;
+      }
+
+      .product-art .emoji {
+        font-size: 40px;
+      }
+
+      .product-info {
+        padding: 12px;
+      }
+
+      .product-info h3 {
+        font-size: 14px;
+      }
+
+      .product-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .order-button {
+        width: 100%;
+      }
+
+      .section {
+        padding: 40px 14px;
+      }
+
+      .brand {
+        font-size: 19px;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .product-art {
+        min-height: 155px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-note">
+    ♡ MADE WITH LOVE · BYFARZ CREATIVE ♡
+  </div>
+
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#home">BYFARZ CREATIVE ♡</a>
+      <a class="nav-link" href="#products">OUR COLLECTION ↓</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <span class="hero-label">CUTE LITTLE THINGS</span>
+
+      <h1>Little Things,<br>Big Happiness ♡</h1>
+
+      <p>
+        Welcome to BYFARZ CREATIVE — your little corner
+        for cute accessories, personalised gifts and
+        lovely things made just for you.
+      </p>
+
+      <a class="button" href="#products">EXPLORE OUR PRODUCTS</a>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading">
+        <span>THE COLLECTION</span>
+        <h2>Our Lovely Products</h2>
+        <p>Find something cute for yourself or someone special ♡</p>
+      </div>
+
+      <div class="products">
+
+        <article class="product-card">
+          <div class="product-art">
+            <span class="emoji">🧸</span>
+            <small>CUTE & FUN</small>
+          </div>
+          <div class="product-info">
+            <h3>Clicker Keychain</h3>
+            <p>A cute little accessory to bring along every day.</p>
+            <div class="product-footer">
+              <span class="price">Price upon enquiry</span>
+              <button class="order-button" data-product="Clicker Keychain">ORDER ♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <span class="emoji">💗</span>
+            <small>PERSONALISED</small>
+          </div>
+          <div class="product-info">
+            <h3>Keychain Nama Bulat</h3>
+            <p>A personalised round name keychain made for you.</p>
+            <div class="product-footer">
+              <span class="price">Price upon enquiry</span>
+              <button class="order-button" data-product="Keychain Nama Bulat">ORDER ♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <span class="emoji">🎀</span>
+            <small>CHARM COLLECTION</small>
+          </div>
+          <div class="product-info">
+            <h3>Keychain Charm</h3>
+            <p>A sweet little charm to decorate your favourite items.</p>
+            <div class="product-footer">
+              <span class="price">Price upon enquiry</span>
+              <button class="order-button" data-product="Keychain Charm">ORDER ♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <span class="emoji">🧱</span>
+            <small>MINI FIGURE</small>
+          </div>
+          <div class="product-info">
+            <h3>Minifigure Brick</h3>
+            <p>A tiny figure for your collection or a special gift.</p>
+            <div class="product-footer">
+              <span class="price">Price upon enquiry</span>
+              <button class="order-button" data-product="Minifigure Brick">ORDER ♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <span class="emoji">🌷</span>
+            <small>HAPPY LITTLE KIT</small>
+          </div>
+          <div class="product-info">
+            <h3>Mini Joy Kit</h3>
+            <p>A little bundle of joy for someone you love.</p>
+            <div class="product-footer">
+              <span class="price">Price upon enquiry</span>
+              <button class="order-button" data-product="Mini Joy Kit">ORDER ♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-art">
+            <span class="emoji">📔</span>
+            <small>AESTHETIC ESSENTIALS</small>
+          </div>
+          <div class="product-info">
+            <h3>Setem Journal Aesthetic</h3>
+            <p>Add a cute touch to your journal and creative pages.</p>
+            <div class="product-footer">
+              <span class="price">Price upon enquiry</span>
+              <button class="order-button" data-product="Setem Journal Aesthetic">ORDER ♡</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="about-inner">
+        <div class="heart">♡ ♡ ♡</div>
+        <h2>A Little Shop Full of Love</h2>
+        <p>
+          At BYFARZ CREATIVE, we believe little things can
+          make someone's day extra special. Thank you for
+          supporting our small creative business.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Let's Make Someone Smile ♡</h2>
+      <p>
+        Interested in a product? Tap below to chat with us
+        on WhatsApp and ask about prices or custom orders.
+      </p>
+      <a
+        class="button"
+        href="https://wa.me/601169304215?text=Hi%20BYFARZ%20CREATIVE!%20I%20would%20like%20to%20enquire%20about%20your%20products."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        CHAT WITH US ON WHATSAPP
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> BYFARZ CREATIVE · MADE WITH ♡
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    const whatsappNumber = "601169304215";
+
+    document.querySelectorAll("[data-product]").forEach(function(button) {
+      button.addEventListener("click", function() {
+        const productName = button.getAttribute("data-product");
+        const message =
+          "Hi BYFARZ CREATIVE! I am interested in " +
+          productName +
+          ". May I know the price and details?";
+
+        const whatsappURL =
+          "https://wa.me/" +
+          whatsappNumber +
+          "?text=" +
+          encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+      });
+    });
+  </script>
+</body>
+</html>
